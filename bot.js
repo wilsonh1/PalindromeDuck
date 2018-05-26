@@ -38,8 +38,10 @@ function checkTime () {
 	if (minutes.length==1) 
 		minutes = '0'+minutes;
 
-	console.log(hour+minutes);
-	console.log(checkPalindrome(hour+minutes));
+	//console.log(hour+minutes);
+	//console.log(checkPalindrome(hour+minutes));
+	if (!checkPalindrome(hour+minutes))
+		console.log('false');
 }
 
 setInterval(checkTime, 1000*60);
