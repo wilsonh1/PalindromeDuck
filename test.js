@@ -4,7 +4,7 @@ var time = require ('time');
 
 //now.setTimezone("America/New_York");
 
-time.setTimezone("America/New_York");
+Date.setTimezone("America/New_York");
 
 a = new time.Date();
 console.log(a.toString());
