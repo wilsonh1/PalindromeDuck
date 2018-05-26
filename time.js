@@ -17,5 +17,11 @@ function checkPalindrome (s) {
 
 var cur = time.localtime(Date.now()/1000);
 
+var hour = cur['hours'].toString();
+var minutes = cur['minutes'].toString());
+
+if (minutes.len==1)
+	minutes = '0'+minutes;
+
 console.log(cur['hours'].toString()+cur['minutes'].toString());
-console.log(checkPalindrome(cur['hours'].toString()+cur['minutes'].toString()));
+console.log(checkPalindrome(hour+minutes);
