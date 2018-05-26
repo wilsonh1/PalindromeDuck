@@ -1,8 +1,10 @@
 var time = require ('time');
 
+/*
 var a = new time.Date();
-a.setTimezone("America/New_York");
+a.setTimezone("America/Los_Ange");
 console.log(a.toString());
+*/
 
-//cur = now.localtime(Date.now()/1000);
-//console.log(cur['minutes']);
+cur = now.localtime(Date.now()/1000);
+console.log(cur['minutes'].toString());
