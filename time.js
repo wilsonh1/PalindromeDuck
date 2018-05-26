@@ -28,4 +28,4 @@ console.log(checkPalindrome(hour+minutes));
 */
 
 var cur = new Date();
-console.log(cur.minutes);
+console.log(cur.getMinutes());
