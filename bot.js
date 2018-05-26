@@ -34,6 +34,7 @@ function ducker (time, date) {
 		return 'duck !!';
 	if (time)
 		return 'duck !';
+	return 'false';
 }
 
 function checkTime () {
