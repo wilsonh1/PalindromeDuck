@@ -5,4 +5,4 @@ var time = require ('time');
 //now.setTimezone("America/Los_Angeles");
 
 cur = time.localtime(Date.now()/1000);
-console.log(typeof cur['minutes']);
+console.log(cur['minutes']);
