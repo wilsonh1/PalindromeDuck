@@ -55,7 +55,7 @@ function checkTime () {
 	date = cur.getDate().toString();
 	year = cur.getFullYear().toString();
 	
-	console.log(month+date+year);
+	console.log(ducker(checkPalindrome(hour+minutes), checkPalindrome(month+date+year)));
 }
 
 checkTime();
