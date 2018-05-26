@@ -1,0 +1,22 @@
+{
+  "name": "bot",
+  "version": "1.0.0",
+  "description": "twitter palindrome bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wilsonh1/PalindromeDuck.git"
+  },
+  "author": "Wilson Ho",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wilsonh1/PalindromeDuck/issues"
+  },
+  "homepage": "https://github.com/wilsonh1/PalindromeDuck#readme",
+  "dependencies": {
+    "twit": "^2.2.9"
+  }
+}
