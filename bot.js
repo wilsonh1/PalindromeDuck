@@ -40,9 +40,9 @@ function checkTime () {
 
 	//console.log(hour+minutes);
 	//console.log(checkPalindrome(hour+minutes));
-	if (checkPalindrome("1331"))
+	
+	if (checkPalindrome(hour+minutes))
 		console.log(hour+minutes);
 }
 
-checkTime();
-//setInterval(checkTime, 1000*60);
+setInterval(checkTime, 1000*60);
