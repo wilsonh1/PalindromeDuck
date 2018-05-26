@@ -23,5 +23,5 @@ var minutes = cur['minutes'].toString());
 if (minutes.len==1)
 	minutes = '0'+minutes;
 
-console.log(cur['hours'].toString()+cur['minutes'].toString());
-console.log(checkPalindrome(hour+minutes);
+console.log(hour+minutes);
+console.log(checkPalindrome(hour+minutes));
