@@ -8,4 +8,4 @@ cur = new time.Date();
 console.log(cur.toString());
 
 cur1 = time.localtime(Date.now()/1000);
-console.log(cur.'minutes');
+console.log(cur.entries);
