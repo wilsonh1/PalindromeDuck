@@ -1,4 +1,5 @@
 //var time = require ('time');
+//uninstalled
 
 /*
 var a = new time.Date();
@@ -15,17 +16,14 @@ function checkPalindrome (s) {
 	return true;
 }
 
-/*var cur = time.localtime(Date.now()/1000);
+var cur = new Date();
 
-var hour = cur['hours'].toString();
-var minutes = cur['minutes'].toString();
+var hour = cur.getHours().toString();
+var minutes = cur.getMinutes().toString();
 
 if (minutes.length==1) 
 	minutes = '0'+minutes;
 
 console.log(hour+minutes);
 console.log(checkPalindrome(hour+minutes));
-*/
 
-var cur = new Date();
-console.log(cur.getMinutes());
