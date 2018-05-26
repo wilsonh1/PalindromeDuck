@@ -20,7 +20,7 @@ var cur = time.localtime(Date.now()/1000);
 var hour = cur['hours'].toString();
 var minutes = cur['minutes'].toString();
 
-if (minutes.len==1)
+if (minutes.length==1) 
 	minutes = '0'+minutes;
 
 console.log(hour+minutes);
