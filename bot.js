@@ -45,4 +45,4 @@ function checkTime () {
 }
 
 checkTime();
-#setInterval(checkTime, 1000*60);
+//setInterval(checkTime, 1000*60);
