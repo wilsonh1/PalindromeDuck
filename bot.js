@@ -16,6 +16,7 @@ function checkPalindrome (s) {
 	return true;
 }
 
+/*
 var cur = new Date();
 
 var hour = cur.getHours().toString();
@@ -26,4 +27,19 @@ if (minutes.length==1)
 
 console.log(hour+minutes);
 console.log(checkPalindrome(hour+minutes));
+*/
 
+function checkTime () {
+	cur = new Date();
+
+	hour = cur.getHours().toString();
+	minutes = cur.getMinutes().toString();
+
+	if (minutes.length==1) 
+		minutes = '0'+minutes;
+
+	console.log(hour+minutes);
+	console.log(checkPalindrome(hour+minutes));
+}
+
+setInterval(checkTime(), 1000 * 60);
