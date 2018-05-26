@@ -34,7 +34,7 @@ function ducker (time, date) {
 		return 'duck !!';
 	if (time)
 		return 'duck !';
-	return 'false';
+	return '';
 }
 
 function checkTime () {
@@ -59,5 +59,5 @@ function checkTime () {
 	console.log(ducker(checkPalindrome(hour+minutes), checkPalindrome(month+date+year)));
 }
 
-checkTime();
-//setInterval(checkTime, 1000*60);
+//checkTime();
+setInterval(checkTime, 1000*60);
