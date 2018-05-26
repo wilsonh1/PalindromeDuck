@@ -1,4 +1,4 @@
-var time = require ('time');
+//var time = require ('time');
 
 /*
 var a = new time.Date();
@@ -15,7 +15,7 @@ function checkPalindrome (s) {
 	return true;
 }
 
-var cur = time.localtime(Date.now()/1000);
+/*var cur = time.localtime(Date.now()/1000);
 
 var hour = cur['hours'].toString();
 var minutes = cur['minutes'].toString();
@@ -25,3 +25,7 @@ if (minutes.length==1)
 
 console.log(hour+minutes);
 console.log(checkPalindrome(hour+minutes));
+*/
+
+var cur = new Date();
+console.log(cur.minutes);
