@@ -1,3 +1,1 @@
 # PalindromeDuck
-# PalindromeDuck
-# PalindromeDuck
