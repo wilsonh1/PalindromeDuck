@@ -4,9 +4,8 @@ var time = require ('time');
 
 //now.setTimezone("America/New_York");
 
-Date.setTimezone("America/New_York");
+var a = new time.Date();
 
-a = new time.Date();
 console.log(a.toString());
 
 //cur = now.localtime(Date.now()/1000);
