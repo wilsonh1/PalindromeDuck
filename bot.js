@@ -38,10 +38,10 @@ function checkTime () {
 	if (minutes.length==1) 
 		minutes = '0'+minutes;
 
-	console.log(hour+minutes);
-	console.log(checkPalindrome(hour+minutes));
-	//if (checkPalindrome(hour+minutes))
-	//	console.log(hour+minutes);
+	//console.log(hour+minutes);
+	//console.log(checkPalindrome(hour+minutes));
+	if (checkPalindrome("1331"))
+		console.log(hour+minutes);
 }
 
 checkTime();
