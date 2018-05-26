@@ -29,6 +29,13 @@ console.log(hour+minutes);
 console.log(checkPalindrome(hour+minutes));
 */
 
+function ducker (time, date) {
+	if (time && date) 
+		return 'duck !!';
+	if (time)
+		return 'duck !';
+}
+
 function checkTime () {
 	cur = new Date();
 
@@ -41,8 +48,12 @@ function checkTime () {
 	//console.log(hour+minutes);
 	//console.log(checkPalindrome(hour+minutes));
 	
-	if (checkPalindrome(hour+minutes))
-		console.log(hour+minutes);
+	//if (checkPalindrome(hour+minutes))
+	//	console.log(hour+minutes);
+
+	month = (cur.getMonth()+1).toString();
+	console.log(month);
 }
 
-setInterval(checkTime, 1000*60);
+checkTime();
+//setInterval(checkTime, 1000*60);
