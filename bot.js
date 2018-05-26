@@ -42,4 +42,4 @@ function checkTime () {
 	console.log(checkPalindrome(hour+minutes));
 }
 
-setInterval(checkTime, 1000 * 60);
+setInterval(checkTime, 1000*60);
