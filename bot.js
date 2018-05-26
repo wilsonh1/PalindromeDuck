@@ -52,7 +52,10 @@ function checkTime () {
 	//	console.log(hour+minutes);
 
 	month = (cur.getMonth()+1).toString();
-	console.log(month);
+	date = cur.getDate().toString();
+	year = cur.getFullYear().toString();
+	
+	console.log(month+date+year);
 }
 
 checkTime();
