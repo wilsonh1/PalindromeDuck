@@ -14,4 +14,5 @@ function checkPalindrome (curtime) {
 
 var cur = time.localtime(Date.now()/1000);
 
+console.log(cur['hours'].toString()+cur['minutes'].toString()));
 console.log(checkPalindrome(cur['hours'].toString()+cur['minutes'].toString()));
