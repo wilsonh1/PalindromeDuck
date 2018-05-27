@@ -18,8 +18,8 @@ var excl = '!!';
 function incr () {
 	cnt ++;
 	if (cnt % 70 === 0) {
-		console.log(excl);
 		excl = excl + '!';
+		console.log(excl);
 	}
 	console.log(cnt);
 }
