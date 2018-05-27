@@ -66,9 +66,9 @@ function ducker () {
 	date = checkPalindrome(month+date+year);
 	
 	if ((time && date) || checkPalindrome(hour+minutes+month+date+year)) 
-		T.post('statuses/update', { status: 'duck !!' }, tweeted)
+		T.post('statuses/update', { status: "duck !! " + hour + ':' + minutes + ' ' + month + '/' + date + '/' + year}, tweeted)
 	else if (time) 
-		T.post('statuses/update', { status: 'duck !' }, tweeted)
+		T.post('statuses/update', { status: 'duck ! ' + hour + ':' + minutes}, tweeted)
 	
 }
 
