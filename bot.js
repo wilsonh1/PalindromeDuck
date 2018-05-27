@@ -17,8 +17,10 @@ var excl = '!!';
 
 function incr () {
 	cnt ++;
-	if (cnt % 70 === 0)
+	if (cnt % 70 === 0) {
+		console.log('!');
 		excl = excl + '!';
+	}
 	console.log(cnt);
 }
 
