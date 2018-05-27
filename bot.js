@@ -12,7 +12,7 @@ function checkPalindrome (s) {
 	return true;
 }
 
-var cnt = 70;
+var cnt = 69;
 var excl = '!!';
 
 function incr () {
