@@ -12,6 +12,9 @@ function checkPalindrome (s) {
 	return true;
 }
 
+var cnt = 69;
+var excl = '!';
+
 function ducker () {
 	cur = new Date();
 
@@ -30,10 +33,18 @@ function ducker () {
 	time = checkPalindrome(hour + minutes);
 	date = checkPalindrome(month + date + year);
 	
-	if ((time && date) || checkPalindrome(hour + minutes + month + date + year)) 
-		T.post('statuses/update', { status: 'duck !! ' + hour + ':' + minutes + ' ' + month + '/' + date + '/' + year}, tweeted)
-	else if (time) 
-		T.post('statuses/update', { status: 'duck ! ' + hour + ':' + minutes}, tweeted)
+	if ((time && date) || checkPalindrome(hour + minutes + month + date + year)) {
+		cnt ++;
+		if (cnt % 70 == 0)
+			excl += '!';
+		T.post('statuses/update', { status: 'DUCK ' + excl + ' ' + hour + ':' + minutes + ' ' + month + '/' + date + '/' + year}, tweeted)
+	}
+	else if (time) {
+		cnt ++;
+		if (cnt % 70 == 0)
+			excl += '!';
+		T.post('statuses/update', { status: 'duck ' + excl + ' ' + hour + ':' + minutes}, tweeted)
+	}
 }
 
 function tweeted (err, response) {
