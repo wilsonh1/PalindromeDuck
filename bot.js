@@ -12,8 +12,8 @@ function checkPalindrome (s) {
 	return true;
 }
 
-var cnt = 70;
-var excl = '!!';
+var cnt = 0;
+var excl = '!';
 
 function incr () {
 	cnt ++;
