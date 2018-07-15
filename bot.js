@@ -18,7 +18,7 @@ var excl = '!!';
 function incr () {
 	cnt ++;
 	if (cnt % 70 === 0) {
-		excl = excl + '!';
+		excl += '!';
 		console.log(excl);
 	}
 	console.log(cnt);
@@ -27,9 +27,12 @@ function incr () {
 function ducker () {
 	cur = new Date();
 
-	hour = cur.getHours().toString();
+	hour = cur.getHours();
+	if (hour > 12)
+		hour -= 12;
+	hour = hour.toString();
+	
 	minutes = cur.getMinutes().toString();
-
 	if (minutes.length == 1) 
 		minutes = '0' + minutes;
 
