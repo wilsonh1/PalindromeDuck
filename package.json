@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/wilsonh1/PalindromeDuck#readme",
   "dependencies": {
-    "twit": "^2.2.9"
+    "twit": "^2.2.11"
   }
 }
