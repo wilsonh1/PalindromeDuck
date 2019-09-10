@@ -40,14 +40,14 @@ function ducker () {
 	date = cur.getDate().toString();
 	year = cur.getFullYear().toString();
 
-	time = checkPalindrome(hour + minutes);
-	date = checkPalindrome(month + date + year);
+	istime = checkPalindrome(hour + minutes);
+	isdate = checkPalindrome(month + date + year);
 
-	if ((time && date) || checkPalindrome(hour + minutes + month + date + year)) {
+	if ((istime && isdate) || checkPalindrome(hour + minutes + month + date + year)) {
 		T.post('statuses/update', { status: 'DUCK ' + excl + ' ' + hour + ':' + minutes + ' ' + month + '/' + date + '/' + year}, tweeted)
 		incr();
 	}
-	else if (time) {
+	else if (istime) {
 		T.post('statuses/update', { status: 'duck ' + excl + ' ' + hour + ':' + minutes}, tweeted)
 		incr();
 	}
