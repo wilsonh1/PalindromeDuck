@@ -28,21 +28,21 @@ function ducker () {
 	cur = new Date();
 
 	hour = cur.getHours();
-	if (hour > 12)
-		hour -= 12;
+	//if (hour > 12)
+	//	hour -= 12;
 	hour = hour.toString();
-	
+
 	minutes = cur.getMinutes().toString();
-	if (minutes.length == 1) 
+	if (minutes.length == 1)
 		minutes = '0' + minutes;
 
 	month = (cur.getMonth()+1).toString();
 	date = cur.getDate().toString();
 	year = cur.getFullYear().toString();
-	
+
 	time = checkPalindrome(hour + minutes);
 	date = checkPalindrome(month + date + year);
-	
+
 	if ((time && date) || checkPalindrome(hour + minutes + month + date + year)) {
 		T.post('statuses/update', { status: 'DUCK ' + excl + ' ' + hour + ':' + minutes + ' ' + month + '/' + date + '/' + year}, tweeted)
 		incr();
@@ -54,9 +54,9 @@ function ducker () {
 }
 
 function tweeted (err, response) {
-	if (err !== undefined) 
+	if (err !== undefined)
 		console.log(err)
-	else 
+	else
 		console.log('Tweeted: ' + response)
 }
 
