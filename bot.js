@@ -45,7 +45,7 @@ function ducker () {
 	isdate = checkPalindrome(month + date + year);
 
 	excl = '!';
-	diff = (Math.floor((cur.getTime() - st.getTime() + 1) / (1000 * 60 * 60 * 24))) % 100;
+	diff = (Math.floor((cur.getTime() - st.getTime()) / (1000 * 60 * 60 * 24))) % 100;
 	for (i=0; i<diff; i++)
 		excl += '!';
 
