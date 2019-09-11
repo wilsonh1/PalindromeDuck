@@ -12,19 +12,20 @@ function checkPalindrome (s) {
 	return true;
 }
 
-var cnt = 0;
-var excl = '!';
+//var cnt = 0;
+//var excl = '!';
 
-function incr () {
+/*function incr () {
 	cnt ++;
 	if (cnt % 70 === 0) {
 		excl += '!';
 		console.log(excl);
 	}
 	console.log(cnt);
-}
+}*/
 
 function ducker () {
+	st = new Date(2019, 8, 10);
 	cur = new Date();
 
 	hour = cur.getHours();
@@ -36,20 +37,25 @@ function ducker () {
 	if (minutes.length == 1)
 		minutes = '0' + minutes;
 
-	month = (cur.getMonth()+1).toString();
+	month = (cur.getMonth() + 1).toString();
 	date = cur.getDate().toString();
 	year = cur.getFullYear().toString();
 
 	istime = checkPalindrome(hour + minutes);
 	isdate = checkPalindrome(month + date + year);
 
+	excl = '!';
+	diff = (Math.floor((cur.getTime() - st.getTime() + 1) / (1000 * 60 * 60 * 24))) % 100;
+	for (i=0; i<diff; i++)
+		excl += '!';
+
 	if ((istime && isdate) || checkPalindrome(hour + minutes + month + date + year)) {
 		T.post('statuses/update', { status: 'DUCK ' + excl + ' ' + hour + ':' + minutes + ' ' + month + '/' + date + '/' + year}, tweeted)
-		incr();
+		//incr();
 	}
 	else if (istime) {
 		T.post('statuses/update', { status: 'duck ' + excl + ' ' + hour + ':' + minutes}, tweeted)
-		incr();
+		//incr();
 	}
 }
 
