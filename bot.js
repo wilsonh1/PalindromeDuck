@@ -1,7 +1,7 @@
 
-var Twit = require('twit')
+var Twit = require('twit');
 
-var T = new Twit(require('./config.js'))
+var T = new Twit(require('./config.js'));
 
 function checkPalindrome (s) {
 	len = s.length;
@@ -11,18 +11,6 @@ function checkPalindrome (s) {
 	}
 	return true;
 }
-
-//var cnt = 0;
-//var excl = '!';
-
-/*function incr () {
-	cnt ++;
-	if (cnt % 70 === 0) {
-		excl += '!';
-		console.log(excl);
-	}
-	console.log(cnt);
-}*/
 
 function ducker () {
 	st = new Date(2019, 8, 10);
@@ -40,30 +28,33 @@ function ducker () {
 	month = (cur.getMonth() + 1).toString();
 	date = cur.getDate().toString();
 	year = cur.getFullYear().toString();
-
-	istime = checkPalindrome(hour + minutes);
-	isdate = checkPalindrome(month + date + year);
+	year2 = (cur.getFullYear() % 100).toString();
 
 	excl = '!';
 	diff = (Math.floor((cur.getTime() - st.getTime()) / (1000 * 60 * 60 * 24))) % 100;
 	for (i=0; i<diff; i++)
 		excl += '!';
 
-	if ((istime && isdate) || checkPalindrome(hour + minutes + month + date + year)) {
-		T.post('statuses/update', { status: 'DUCK ' + excl + ' ' + hour + ':' + minutes + ' ' + month + '/' + date + '/' + year}, tweeted)
-		//incr();
+	str = "";
+	if (checkPalindrome(hour + minutes + month + date + year))
+		str = 'DUCK ' + excl + ' ' + hour + ':' + minutes + ' ' + month + '/' + date + '/' + year;
+	else if (checkPalindrome(hour + minutes)) {
+		if (checkPalindrome(month + date + year))
+			str = 'DuCK ' + excl + ' ' + hour + ':' + minutes + ' ' + month + '/' + date + '/' + year;
+		else if (checkPalindrome(month + date + year2))
+			str = 'duCK ' + excl + ' ' + hour + ':' + minutes + ' ' + month + '/' + date + '/' + year2;
+		else
+			str = 'duck ' + excl + ' ' + hour + ':' + minutes;
 	}
-	else if (istime) {
-		T.post('statuses/update', { status: 'duck ' + excl + ' ' + hour + ':' + minutes}, tweeted)
-		//incr();
-	}
+	if (str.length)
+		T.post('statuses/update', { status: str}, tweeted);
 }
 
 function tweeted (err, response) {
 	if (err !== undefined)
-		console.log(err)
+		console.log(err);
 	else
-		console.log('Tweeted: ' + response)
+		console.log('Tweeted: ' + response);
 }
 
 setInterval(ducker, 1000*59);
