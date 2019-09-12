@@ -43,6 +43,8 @@ function ducker () {
 			str = 'DuCK ' + excl + ' ' + hour + ':' + minutes + ' ' + month + '/' + date + '/' + year;
 		else if (checkPalindrome(month + date + year2))
 			str = 'duCK ' + excl + ' ' + hour + ':' + minutes + ' ' + month + '/' + date + '/' + year2;
+		else if (checkPalindrome(month + date))
+			str = 'Duck ' + excl + ' ' + hour + ':' + minutes + ' ' + month + '/' + date;
 		else
 			str = 'duck ' + excl + ' ' + hour + ':' + minutes;
 	}
