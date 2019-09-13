@@ -59,4 +59,5 @@ function tweeted (err, response) {
 		console.log('Tweeted: ' + response);
 }
 
+ducker();
 setInterval(ducker, 1000*59);
