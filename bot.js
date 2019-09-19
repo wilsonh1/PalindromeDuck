@@ -16,8 +16,7 @@ function ducker () {
 	st = new Date(2019, 8, 10);
 	cur = new Date();
 
-	hour = cur.getHours();
-	hour = hour.toString();
+	hour = cur.getHours().toString();
 
 	minutes = cur.getMinutes().toString();
 	if (minutes.length == 1)
